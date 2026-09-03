@@ -44,7 +44,7 @@ jobs:
         run: npm run test
 
       - name: Build Application
-        run: npm run build
+        run: npm run build && node scripts/generate-gh-pages.mjs
 
       - name: Setup Pages
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
